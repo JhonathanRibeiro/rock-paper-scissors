@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css?family=Asap:400,500,700');
 * {
   margin: 0;
@@ -78,12 +79,10 @@ header > h1 {
     font-size: 20px;
     margin-top: 20px;
 }
-
 .green-glow {
     border: 4px solid #4dcc7d;
     box-shadow: 0 0 10px #31b431;
 }
-
 .red-glow {
     border: 4px solid #fc121b;
     box-shadow: 0 0 10px #d00015;
