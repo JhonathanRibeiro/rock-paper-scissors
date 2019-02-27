@@ -15,9 +15,9 @@ function getComputerChoice() {
 }
 
 function convertToWord(letter) {
-    if(letter === "r") return "Rock";
-    if(letter === "p") return "Paper";
-    return "Scissors";
+    if(letter === "r") return "Pedra";
+    if(letter === "p") return "Papel";
+    return "Tesoura";
 }
 
 function win(userChoice, computerChoice) {
@@ -27,7 +27,7 @@ function win(userChoice, computerChoice) {
     userScore++;
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = computerScore;
-    result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord} beats ${convertToWord(computerChoice)}${smallCompWord} . You win!🔥 `;
+    result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord} vence ${convertToWord(computerChoice)}${smallCompWord} . Você venceu!🔥 `;
     userChoice_div.classList.add('green-glow');
     setTimeout(() => userChoice_div.classList.remove('green-glow'), 800);
 }
@@ -41,7 +41,7 @@ function lose(userChoice, computerChoice) {
     computerScore++;
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = computerScore;
-    result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord} loses to ${convertToWord(computerChoice)}${smallCompWord} . You Lost... 💩`;
+    result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord} perde para ${convertToWord(computerChoice)}${smallCompWord} . Você perdeu... 💩`;
      userChoice_div.classList.add('red-glow');
     setTimeout(() => userChoice_div.classList.remove('red-glow'), 800);
 }
@@ -49,7 +49,7 @@ function draw(userChoice, computerChoice) {
     const smallUserWord = "user".fontsize(3).sup();
     const smallCompWord = "comp".fontsize(3).sup();
     const userChoice_div = document.getElementById(userChoice);
-    result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord} equals ${convertToWord(computerChoice)}${smallCompWord} . It's a Draw! 🚫`;
+    result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord} é igual a ${convertToWord(computerChoice)}${smallCompWord} . Empate! 🚫`;
      userChoice_div.classList.add('grey-glow');
     setTimeout(() => userChoice_div.classList.remove('grey-glow'), 800);
 }
